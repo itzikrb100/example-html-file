@@ -46,3 +46,23 @@ input, textarea {
     padding: 10px;
     margin: 5px 0;
 }
+
+.container {
+  margin: 40px auto;
+  max-width: 600px;
+}
+.element {
+  width: 100%;
+  background-color: skyblue;
+  text-align: center;
+  color: white;
+  font-size: 3em;
+}
+.element:-ms-fullscreen p {
+  visibility: visible;
+}
+.element:fullscreen {
+  background-color: #e4708a;
+  width: 100vw;
+  height: 100vh;
+}
