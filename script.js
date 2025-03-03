@@ -14,6 +14,24 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
+
+// Function to parse and display query parameters
+function displayQueryParams() {
+    const params = new URLSearchParams(window.location.search);
+    const displayArea = document.createElement("div");
+    displayArea.innerHTML = "<h3>Query Parameters:</h3>";
+    
+    params.forEach((value, key) => {
+        displayArea.innerHTML += `<p><strong>${key}</strong>: ${value}</p>`;
+    });
+
+    document.body.appendChild(displayArea);
+}
+
+// Call function when the page loads
+window.onload = displayQueryParams;
+
+
 async function startMicrophone() {
     try {
         const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
